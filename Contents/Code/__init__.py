@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import re
+import base64
 
 HLS_COMPAT = ('iOS', 'Android', 'Roku', 'Safari', 'MacOSX', 'Windows', 'Plex Home Theater', 'Samsung')
 shurl = 'http://shahid.mbc.net/ar/shows/content/00~listing~-param-.ptype-.Id-0.sort-latest.pageNumber-%d.html'
@@ -22,9 +23,10 @@ hadurl = 'http://hadynz-shahid.appspot.com/scrape?m=%s'
 imgurl = 'http://www.webproxy.net/view?q=%s'
 START_MENU = [['TV Shows', 'sh'], ['All Series', 'al'],["Drama","dr"], ['Comedy','co'], ['Romance','ro'], ['Syrian','sr'],['Khaliji','kh'],['Korean','ko'], ['Turkish','tr'] ,['Egyptian','eg']]
 PREFIX = "/video/shahid"
-NAME = "ShahidMBC2"
+NAME = "ShahidMBC"
 ART = "art-default3.jpg"
 ICON = "icon-default3.png"
+key = base64.b64decode('YXBpS2V5PXNoJTQwaGlkMG5saW4zJmhhc2g9YjJ3TUNUSHBTbXl4R3FRakpGT3ljUm1MU2V4JTJCQnBUSy9vb3h5NnZIYXFzJTNE')
 search_cover = False
 HLSF = False
 blocked = False
@@ -43,7 +45,7 @@ def contentsjson(n,url):
 		dic=  JSON.ObjectFromURL(url)
 
 def videoID(Id, HLSF=False):
-	url = 'http://api.shahid.net/api/Content/Episode/'+Id+'/0?apiKey=sh%40hid0nlin3&hash=b2wMCTHpSmyxGqQjJFOycRmLSex%2BBpTK/ooxy6vHaqs%3D'
+	url = 'http://api.shahid.net/api/Content/Episode/'+Id+'/0?'+key
 	dic = JSON.ObjectFromURL(url) #contentsjson(2,url)
 	m3u8= str(dic['data']['url']).split('/')[-1]
 	if HLSF:
