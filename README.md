@@ -10,7 +10,7 @@ Requirements:
 After installing Plex Media Server, extract Shahid.bundle on the Plug-ins folder. 
 - [How do I find the Plug-Ins folder?][Plug-Ins]
  
-Not: If you downloaded Shahid.bundle as zip file, then make sure to rename it to Shahid.bundle instead of Shahid.bundle-master. 
+Note: If you downloaded Shahid.bundle as zip file, then make sure to rename it to Shahid.bundle instead of Shahid.bundle-master. 
 
 
 
