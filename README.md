@@ -1,7 +1,8 @@
 # Shahid.bundle
 
-Installation
+
+## Installation
 
 Requirements:
 
-    Plex Media Server
+- [Plex Media Server][media-server]
