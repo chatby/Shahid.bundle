@@ -7,7 +7,7 @@ Requirements:
 
 - [Plex Media Server][media-server]
 After installing Plex Media Server, extract Shahid.bundle on the Plug-ins folder. 
-[How do I find the Plug-Ins folder?][Plug-Ins]
+-[How do you find the Plug-Ins folder?][Plug-Ins]
 
 
 [media-server]: http://plexapp.com/getplex/
