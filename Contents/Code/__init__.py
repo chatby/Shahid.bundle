@@ -22,7 +22,7 @@ hadurl = 'http://hadynz-shahid.appspot.com/scrape?m=%s'
 imgurl = 'http://www.webproxy.net/view?q=%s'
 START_MENU = [['TV Shows', 'sh'], ['All Series', 'al'],["Drama","dr"], ['Comedy','co'], ['Romance','ro'], ['Syrian','sr'],['Khaliji','kh'],['Korean','ko'], ['Turkish','tr'] ,['Egyptian','eg']]
 PREFIX = "/video/shahid"
-NAME = "ShahidMBC"
+NAME = "ShahidMBC2"
 ART = "art-default3.jpg"
 ICON = "icon-default3.png"
 search_cover = False
@@ -32,14 +32,14 @@ def contentsxpath(blocked,url):
 	if not blocked :
 		doc=  HTML.ElementFromURL(url)
 	else:
-		url= "http://ekav.info/anonymous/browse.php?u=%s" %url	
+		url= "http://ekkun.com/tower/hack.php?url=%s" %url	
 		doc=  HTML.ElementFromURL(url)
 	return doc
 def contentsjson(n,url):
 	if n == 1:	
 		dic=  JSON.ObjectFromURL(url)
 	else:
-		url= "http://ekav.info/anonymous/browse.php?u=%s" %url
+		url= "http://ekkun.com/tower/hack.php?url=%s" %url
 		dic=  JSON.ObjectFromURL(url)
 
 def videoID(Id, HLSF=False):
@@ -148,7 +148,7 @@ def CreateShahidList(sel, title = "Sports", page=0):
 			SID2 =urls3[i]
 			stype  = 2
 			
-		img = imgs2[i]
+		img = 'http://ekkun.com/tower/hack.php?url='+imgs2[i]
 		cover = img
 		name2  = SID2
 		oc.add(DirectoryObject(
