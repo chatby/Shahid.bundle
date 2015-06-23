@@ -1,5 +1,8 @@
 # Shahid.bundle
 
+ باقة واسعة من المسلسلات والبرامج
+Shahid MBC (Arabic TV Shows and Series) 
+
 
 ## Installation
 
