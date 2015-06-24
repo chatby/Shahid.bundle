@@ -10,7 +10,8 @@ Requirements:
 
 - [Plex Media Server][media-server]
  
-After installing Plex Media Server, extract Shahid.bundle on the Plug-ins folder. 
+First, install Plex Media Server, extract Shahid.bundle on the Plug-ins folder.
+After that, open a browser and go to http://127.0.0.1:32400/web.
 - [How do I find the Plug-Ins folder?][Plug-Ins]
  
 Note: If you downloaded Shahid.bundle as a zip file, then make sure to rename it to Shahid.bundle instead of Shahid.bundle-master. 
