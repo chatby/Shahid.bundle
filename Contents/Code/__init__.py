@@ -149,9 +149,11 @@ def CreateShahidList(sel, title = "Sports", page=0):
 		else:
 			SID2 =urls3[i]
 			stype  = 2
-			
-		img = 'http://ekkun.com/tower/hack.php?url='+imgs2[i]
-		cover = img
+		if not blocked :
+			cover = imgs2[i]
+		else:
+			cover = 'http://ekkun.com/tower/hack.php?url='+imgs2[i]
+		
 		name2  = SID2
 		oc.add(DirectoryObject(
 			key = Callback(ShahidWatch, url = str(SID2), cover = cover, title = name2, stype=stype),
