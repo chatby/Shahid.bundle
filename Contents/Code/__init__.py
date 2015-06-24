@@ -149,7 +149,7 @@ def CreateShahidList(sel, title = "Sports", page=0):
 		else:
 			SID2 =urls3[i]
 			stype  = 2
-		if not blocked :
+		if not blocked:
 			cover = imgs2[i]
 		else:
 			cover = 'http://ekkun.com/tower/hack.php?url='+imgs2[i]
