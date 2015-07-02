@@ -191,6 +191,7 @@ def ShahidWatch(url,cover, title,stype):
 	return oc
 
 def CreateVideoClipObject(url, title, thumb, container = False):
+    global HLSF
     vco = VideoClipObject(
         key = Callback(CreateVideoClipObject, url = url, title = title, thumb = thumb, container = True),
         url = url,
