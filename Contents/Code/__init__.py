@@ -172,6 +172,7 @@ def ShahidWatch(url,cover, title,stype):
 		url=url.split('_')[1]
 		episodes = episodesId(url,stype,4)
 		cover =  search_cover
+		global blocked
 		if blocked:
 			cover = 'http://ekkun.com/tower/hack.php?url='+cover
 	else:    	
