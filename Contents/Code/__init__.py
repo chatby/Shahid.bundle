@@ -154,7 +154,7 @@ def CreateShahidList(sel, title = "Sports", page=0):
 		
 		cover = imgs2[i]
 		if blocked:
-			cover = 'http://ekkun.com/tower/hack.php?url='+imgs2[i]
+			cover = 'http://ekkun.com/tower/hack.php?url='+cover
 		
 		name2  = SID2
 		oc.add(DirectoryObject(
