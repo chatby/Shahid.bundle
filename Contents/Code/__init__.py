@@ -138,6 +138,7 @@ def SearchShahidList(query):
 		return ShahidWatch('se_'+query,allcover, query,2)
 
 def CreateShahidList(sel, title = "Sports", page=0):
+	global blocked
 	doc2 = contentsxpath(sel %page)
 	urls3 =  doc2.xpath('//*[@class="subitem"]/div/@id')[1:][::2]
 	imgs2 = doc2.xpath('//*[@class="subitem"]/*/a/*/img/@src')
@@ -150,9 +151,9 @@ def CreateShahidList(sel, title = "Sports", page=0):
 		else:
 			SID2 =urls3[i]
 			stype  = 2
-		if not blocked:
-			cover = imgs2[i]
-		else:
+		
+		cover = imgs2[i]
+		if blocked:
 			cover = 'http://ekkun.com/tower/hack.php?url='+imgs2[i]
 		
 		name2  = SID2
@@ -178,6 +179,7 @@ def ShahidWatch(url,cover, title,stype):
 			cover = 'http://ekkun.com/tower/hack.php?url='+cover
 	else:    	
 		episodes = episodesId(url,stype,5)
+
 	if len(episodes)>0:
 		Ids=[]
 		oc = ObjectContainer(title1 = title)
