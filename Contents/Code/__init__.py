@@ -195,11 +195,27 @@ def CreateShahidList(sel, title = "Sports", page=0):
 	oc = ObjectContainer(title1 = title)
 	#Log.Debug("len(urls3) %s", len(urls3))
 	for i in range(len(urls3)):
+<<<<<<< HEAD
 
 		name2  = urls3[i]
 		cover = imgs2[i]
 		if blocked:
 			cover = 'http://ekkun.com/tower/hack.php?url='+cover
+=======
+		
+		if '/show' in sel:
+			SID2 = urls3[i]
+			stype = 1
+		else:
+			SID2 =urls3[i]
+			stype  = 2
+		
+		cover = imgs2[i]
+		if blocked:
+			cover = 'http://ekkun.com/tower/hack.php?url='+cover
+		
+		name2  = SID2
+>>>>>>> b613d9604822897316d46cfc6b64f155933f28dd
 		oc.add(DirectoryObject(
 			key = Callback(ShahidWatch, url = name2, cover = cover, title = name2, stype=stype),
 			title = name2,
@@ -216,6 +232,7 @@ def ShahidWatch(url,cover, title,stype):
 	#Log.Debug("SID : %s", url)
 	oc = ObjectContainer(title1 = title)
 	global blocked
+<<<<<<< HEAD
 	if stype != 'channel-browser':
 		if 'se' in url:
 			url=url.split('_')[1]
@@ -241,6 +258,27 @@ def ShahidWatch(url,cover, title,stype):
 					title = name,
 					thumb = Resource.ContentsOfURLWithFallback(url = cover, fallback='icon-cover.png')
 					))
+=======
+	if 'se' in url:
+		url=url.split('_')[1]
+		episodes = episodesId(url,stype,4)
+		cover =  search_cover
+		if blocked:
+			cover = 'http://ekkun.com/tower/hack.php?url='+cover
+	else:    	
+		episodes = episodesId(url,stype,5)
+
+	if len(episodes)>0:
+		Ids=[]
+		oc = ObjectContainer(title1 = title)
+		k=1
+		for ep in episodes[::-1]:
+			Ids.append(ep)
+			k+=1
+		for n in range(0,len(Ids)):
+			name= str(n+1)
+			oc.add(CreateVideoClipObject(url=Ids[n], title=' Episode '+name, thumb=cover))
+>>>>>>> b613d9604822897316d46cfc6b64f155933f28dd
 	else:
 
 		urls,imgs= ChannelId(url,'channel-browser')
