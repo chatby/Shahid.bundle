@@ -32,7 +32,7 @@ hadurl = 'http://hadynz-shahid.appspot.com/scrape?m=%s'
 imgurl = 'http://www.webproxy.net/view?q=%s'
 START_MENU = [['TV Shows', 'sh'], ['All Series', 'al'],["Drama","dr"], ['Comedy','co'], ['Romance','ro'], ['Syrian','sr'],['Khaliji','kh'],['Korean','ko'], ['Turkish','tr'] ,['Egyptian','eg'],['Channels', 'ch']]
 PREFIX = "/video/shahid"
-NAME = "ShahidMBC2"
+NAME = "ShahidMBC"
 ART = "art-default3.jpg"
 ICON = "icon-default3.png"
 key = base64.b64decode('YXBpS2V5PXNoJTQwaGlkMG5saW4zJmhhc2g9YjJ3TUNUSHBTbXl4R3FRakpGT3ljUm1MU2V4JTJCQnBUSy9vb3h5NnZIYXFzJTNE')
