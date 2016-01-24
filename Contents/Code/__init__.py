@@ -239,7 +239,7 @@ def ShahidWatch(url,cover, title,stype):
 		if len(episodes)>0:
 			Ids=[]
 
-			Ids = episodes[::-1]
+			Ids = episodes#[::-1]
 			for n in range(0, len(Ids)):
 				name= ' Episode '+str(n+1)
 				#Log.Debug("n  %d", n)
