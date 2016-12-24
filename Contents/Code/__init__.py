@@ -56,8 +56,8 @@ def contentsjson(n,url):
 
 def videoID(Id):
 	global HLSF
-	url = 'http://api.shahid.net/api/Content/Episode/'+Id+'/0?'+key
-	#url = 'https://plustest.shahid.net/arContent/getPlayerContent-param-.id-'+Id+'.type-player.html?'
+	#url = 'http://api.shahid.net/api/Content/Episode/'+Id+'/0?'+key
+	url = 'http://frontselb.shahid.net/arContent/getPlayerContent-param-.id-'+Id+'.playList-true.type-player.html?mobile=true'
 	#Log.Debug("api url: %s", url)
 	dic = JSON.ObjectFromURL(url) #contentsjson(2,url)
 	m3u8= str(dic['data']['url']).split('/')[-1]
