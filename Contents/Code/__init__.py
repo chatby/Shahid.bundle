@@ -1,6 +1,6 @@
 import re
 import base64
-
+#Hello master barnch
 HLS_COMPAT = (None, 'iOS', 'Android', 'Roku', 'Safari', 'MacOSX', 'Windows', 'Plex Home Theater', 'Samsung')
 
 shurl = 'https://plustest.shahid.net/ar/shows/content/00~listing~-param-.ptype-.Id-0.sort-latest.pageNumber-%d.html'
