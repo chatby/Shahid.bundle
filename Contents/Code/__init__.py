@@ -1,7 +1,6 @@
 import re
 import base64
 
-#hello feature Branch
 
 HLS_COMPAT = (None, 'iOS', 'Android', 'Roku', 'Safari', 'MacOSX', 'Windows', 'Plex Home Theater', 'Samsung')
 
